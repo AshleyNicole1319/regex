@@ -96,13 +96,9 @@ Our regex shows one big group with two expressions.
 ### Greedy and Lazy Match
 /^#`?`([a-f0-9]`{6}`|[a-f0-9]`{3}`)$/
 
-Quantifiers are considered **greedy** by default, meaning that they try to match the string as much as possible in all ways possible. If the `?` was removed from our regex, it would work to match every string that begins with `#`, followed by the rest of the items 
+Quantifiers are considered **greedy** by default, meaning that they try to match the string as much as possible in all ways possible. If the `?` was removed from our regex, it would work to match every string that begins with `#`, followed by the rest of the items. So #a4f5d0 or #f00 for example.
 
-For example, imagine that the `?` is removed from our regex. The regex would match every string that begins with `#` and then moves on to finding a match for the rest of the pattern.
-
-If the `?` character is placed after a quantifier like `*`, `+`, `?`, or `{}`, then its meaning changes. It makes a quantifier "non-greedy" or **lazy**. A **lazy** quantifier means that it will match the string as little as possible.
-
-Let's recap: we have learned earlier that reading `^#?` makes the preceding character of `#` optional within the regex. As a result, its matches would be: `f00`, `b9f5d8`, `#aad2ba`.
+With the `?` though, the quantifier becomes **lazy**. A **lazy** quantifier means that it will match the string as little as possible. So #f00, #a4f5d0, f00, or a4f5d0
 
 ## Author
 Ashley Warford is new to coding and learning as she goes! Hoping to be a successful full-stack developer one day. Contact her at <a-warford96@comcast.net> or visit her github <https://github.com/AshleyNicole1319>
